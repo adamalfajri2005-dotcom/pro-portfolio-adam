@@ -82,55 +82,22 @@
       <section>
         <div class="glass p-8 rounded-3xl overflow-x-auto">
           <section>
-            <div
-              class="glass p-8 rounded-3xl overflow-x-auto flex justify-center"
-            >
-              <pre class="mermaid bg-transparent">
-                    %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#FACC15', 'edgeLabelBackground':'#111111', 'tertiaryColor': '#111'}}}%%
-                    graph TD
-                        User[👤 User Input] -->|Pilih Soal| Script[🐍 Python Script]
-                        Script -->|Running| Method{Pilih Metode}
-                        Method -- Bisection --> Logic1[➗ Hitung Titik Tengah]
-                        Method -- Newton --> Logic2[📉 Hitung Turunan]
-                        Logic1 --> Check{Error < 0.001?}
-                        Logic2 --> Check
-                        Check -- No --> Loop[🔁 Iterasi Ulang]
-                        Loop --> Script
-                        Check -- Yes --> Result[✅ Print Akar & Grafik]
-                </pre
-              >
+            <div class="glass p-8 rounded-3xl overflow-x-auto flex justify-center">
+                <pre class="mermaid bg-transparent">
+graph TD
+User["👤 User Input"] -->|Pilih Soal| Script["🐍 Python Script"]
+Script -->|Running| Method{"Pilih Metode"}
+Method -- Bisection --> Logic1["➗ Hitung Titik Tengah"]
+Method -- Newton --> Logic2["📉 Hitung Turunan"]
+Logic1 --> Check{"Error < 0.001?"}
+Logic2 --> Check
+Check -- No --> Loop["🔁 Iterasi Ulang"]
+Loop --> Script
+Check -- Yes --> Result["✅ Print Akar & Grafik"]
+</pre>
             </div>
-            <p class="text-center text-xs text-gray-600 mt-4 font-mono">
-              Algorithm Execution Flow
-            </p>
-          </section>
-        </div>
-        <p class="text-center text-xs text-gray-600 mt-4 font-mono">
-          Algorithm Execution Flow
-        </p>
-      </section>
-
-      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass p-8 rounded-3xl">
-          <h3 class="font-mono text-lg font-bold text-white mb-4">
-            ⚠️ The Problem
-          </h3>
-          <p class="text-sm leading-relaxed">
-            Menghitung manual metode Newton Raphson membutuhkan 10-20 iterasi
-            turunan. Rentan *human error* dan memakan waktu >30 menit per soal.
-          </p>
-        </div>
-        <div class="glass p-8 rounded-3xl border-yellow-500/20">
-          <h3 class="font-mono text-lg font-bold text-yellow-400 mb-4">
-            ⚡ The Result
-          </h3>
-          <p class="text-sm leading-relaxed">
-            Script mampu menyelesaikan 100 iterasi dalam
-            <strong>0.05 detik</strong>. Dilengkapi visualisasi grafik
-            *matplotlib* untuk melihat pergerakan akar persamaan.
-          </p>
-        </div>
-      </section>
+            <p class="text-center text-xs text-gray-600 mt-4 font-mono">Algorithm Execution Flow</p>
+        </section>
 
       <div class="pt-10 border-t border-gray-800">
         <a
