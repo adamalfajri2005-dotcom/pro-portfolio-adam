@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study: Numerical Solver | Adam Alfajri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Space Grotesk", "monospace"],
+            },
+            colors: { "sys-black": "#111111", "accent-yellow": "#FACC15" },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-sys-black text-gray-300 antialiased selection:bg-yellow-500 selection:text-black"
+  >
+    <nav
+      class="fixed top-0 w-full bg-sys-black/80 backdrop-blur-md border-b border-gray-800 z-50"
+    >
+      <div
+        class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-white transition"
+        >
+          <i class="ri-arrow-left-line"></i> Back to Portfolio
+        </a>
+        <span
+          class="font-mono text-xs font-bold bg-gray-900 border border-gray-700 px-2 py-1 rounded text-yellow-500"
+          >ALGORITHM</span
+        >
+      </div>
+    </nav>
+
+    <header class="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+      <div class="flex gap-2 mb-6">
+        <span
+          class="px-3 py-1 rounded-full border border-yellow-900/50 bg-yellow-500/10 text-yellow-500 text-xs font-bold"
+          >PYTHON</span
+        >
+        <span
+          class="px-3 py-1 rounded-full border border-gray-700 bg-gray-800 text-gray-400 text-xs font-bold"
+          >NUMPY</span
+        >
+      </div>
+      <h1
+        class="text-4xl md:text-6xl font-mono font-bold mb-6 text-white leading-tight"
+      >
+        Numerical <span class="text-yellow-500">Solver.</span>
+      </h1>
+      <p class="text-xl text-gray-400 leading-relaxed max-w-2xl">
+        Automasi perhitungan 15 metode numerik kompleks (Bisection, Newton
+        Raphson, dll) dengan akurasi tinggi menggunakan Python.
+      </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-20 space-y-16">
+      <section>
+        <div class="glass p-8 rounded-3xl overflow-x-auto">
+          <div class="mermaid flex justify-center">
+            %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor':
+            '#FACC15', 'edgeLabelBackground':'#111111', 'tertiaryColor':
+            '#111'}}}%% graph TD User[👤 User Input] -->|Pilih Soal| Script[🐍
+            Python Script] Script -->|Running| Method{Pilih Metode} Method --
+            Bisection --> Logic1[➗ Hitung Titik Tengah] Method -- Newton -->
+            Logic2[📉 Hitung Turunan] Logic1 --> Check{Error < 0.001?} Logic2
+            --> Check Check -- No --> Loop[🔁 Iterasi Ulang] Loop --> Script
+            Check -- Yes --> Result[✅ Print Akar & Grafik]
+          </div>
+        </div>
+        <p class="text-center text-xs text-gray-600 mt-4 font-mono">
+          Algorithm Execution Flow
+        </p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="glass p-8 rounded-3xl">
+          <h3 class="font-mono text-lg font-bold text-white mb-4">
+            ⚠️ The Problem
+          </h3>
+          <p class="text-sm leading-relaxed">
+            Menghitung manual metode Newton Raphson membutuhkan 10-20 iterasi
+            turunan. Rentan *human error* dan memakan waktu >30 menit per soal.
+          </p>
+        </div>
+        <div class="glass p-8 rounded-3xl border-yellow-500/20">
+          <h3 class="font-mono text-lg font-bold text-yellow-400 mb-4">
+            ⚡ The Result
+          </h3>
+          <p class="text-sm leading-relaxed">
+            Script mampu menyelesaikan 100 iterasi dalam
+            <strong>0.05 detik</strong>. Dilengkapi visualisasi grafik
+            *matplotlib* untuk melihat pergerakan akar persamaan.
+          </p>
+        </div>
+      </section>
+
+      <div class="pt-10 border-t border-gray-800">
+        <a
+          href="project-mabing.html"
+          class="group block bg-gradient-to-r from-gray-900 to-black border border-gray-800 p-8 rounded-3xl relative overflow-hidden hover:border-green-500/50 transition"
+        >
+          <div class="relative z-10 flex justify-between items-center">
+            <div>
+              <span class="text-xs font-mono text-gray-500 mb-2 block"
+                >NEXT CASE STUDY</span
+              >
+              <h3
+                class="text-2xl font-mono font-bold text-white group-hover:text-green-400 transition"
+              >
+                Project Mabing Leadership &rarr;
+              </h3>
+            </div>
+            <i
+              class="ri-team-fill text-4xl text-gray-800 group-hover:text-green-500 transition"
+            ></i>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js";
+      mermaid.initialize({ startOnLoad: true, theme: "dark" });
+    </script>
+  </body>
+</html>

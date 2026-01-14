@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study: Project Mabing | Adam Alfajri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Space Grotesk", "monospace"],
+            },
+            colors: { "sys-black": "#111111", "accent-green": "#16A34A" },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gray-50 text-sys-black antialiased selection:bg-green-200 selection:text-green-900"
+  >
+    <nav
+      class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200 z-50"
+    >
+      <div
+        class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-black transition"
+        >
+          <i class="ri-arrow-left-line"></i> Back to Portfolio
+        </a>
+        <span
+          class="font-mono text-xs font-bold bg-green-50 border border-green-200 px-2 py-1 rounded text-green-700"
+          >LEADERSHIP</span
+        >
+      </div>
+    </nav>
+
+    <header class="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+      <div class="flex gap-2 mb-6">
+        <span
+          class="px-3 py-1 rounded-full border border-green-200 bg-green-50 text-green-700 text-xs font-bold"
+          >HIMTI UIN</span
+        >
+        <span
+          class="px-3 py-1 rounded-full border border-gray-200 bg-white text-gray-500 text-xs font-bold"
+          >PROJECT MANAGER</span
+        >
+      </div>
+      <h1 class="text-4xl md:text-6xl font-mono font-bold mb-6 leading-tight">
+        Project <span class="text-green-600">Mabing.</span>
+      </h1>
+      <p class="text-xl text-gray-500 leading-relaxed max-w-2xl">
+        Memimpin ekosistem kaderisasi untuk mahasiswa baru Teknik Informatika.
+        Mengelola 13 kelompok mentor dan memastikan transfer *value* berjalan
+        selama 1 semester.
+      </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-20 space-y-16">
+      <section>
+        <div
+          class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 overflow-x-auto"
+        >
+          <div class="mermaid flex justify-center">
+            graph TD Adam[👑 PJ Mabing<br />Project Lead] --> Core[Tim Inti &
+            Konseptor] Adam --> Field[Koord. Lapangan] Core --> Mentors[👥 13
+            Kelompok Mentor] Field --> Mentors Mentors --> Maba[🎓 Mahasiswa
+            Baru<br />Class of 2025] style Adam
+            fill:#16A34A,stroke:#fff,color:#fff style Maba
+            fill:#f0fdf4,stroke:#16A34A,stroke-width:2px
+          </div>
+        </div>
+        <p class="text-center text-xs text-gray-400 mt-4 font-mono">
+          Organizational Responsibility Chart
+        </p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div
+          class="bg-white p-6 rounded-3xl border border-gray-100 text-center hover:border-green-200 transition"
+        >
+          <div class="text-4xl font-mono font-bold text-green-600 mb-2">9</div>
+          <div
+            class="text-xs font-bold text-gray-400 uppercase tracking-widest"
+          >
+            Pertemuan Rutin
+          </div>
+        </div>
+        <div
+          class="bg-white p-6 rounded-3xl border border-gray-100 text-center hover:border-green-200 transition"
+        >
+          <div class="text-4xl font-mono font-bold text-green-600 mb-2">13</div>
+          <div
+            class="text-xs font-bold text-gray-400 uppercase tracking-widest"
+          >
+            Kelompok Mentor
+          </div>
+        </div>
+        <div
+          class="bg-white p-6 rounded-3xl border border-gray-100 text-center hover:border-green-200 transition"
+        >
+          <div class="text-4xl font-mono font-bold text-green-600 mb-2">
+            100%
+          </div>
+          <div
+            class="text-xs font-bold text-gray-400 uppercase tracking-widest"
+          >
+            Success Rate
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm"
+      >
+        <h2 class="font-mono text-xl font-bold mb-6">Strategic Role</h2>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <i class="ri-check-line text-green-500 text-xl font-bold"></i>
+            <p class="text-gray-600 text-sm">
+              Merancang kurikulum materi (Softskill & Hardskill) untuk 9 kali
+              pertemuan.
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ri-check-line text-green-500 text-xl font-bold"></i>
+            <p class="text-gray-600 text-sm">
+              Melakukan *Quality Control* terhadap kinerja mentor dalam
+              membimbing adik tingkat.
+            </p>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="ri-check-line text-green-500 text-xl font-bold"></i>
+            <p class="text-gray-600 text-sm">
+              Menangani manajemen krisis dan konflik interpersonal antar anggota
+              kelompok.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <div class="pt-10 border-t border-gray-200 flex justify-center">
+        <a
+          href="index.html"
+          class="px-8 py-4 rounded-full bg-sys-black text-white font-bold hover:bg-gray-800 transition shadow-lg flex items-center gap-2"
+        >
+          <i class="ri-home-4-fill"></i> Back to Homepage
+        </a>
+      </div>
+    </main>
+
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js";
+      mermaid.initialize({ startOnLoad: true, theme: "neutral" });
+    </script>
+  </body>
+</html>
