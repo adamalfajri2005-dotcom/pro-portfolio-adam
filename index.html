@@ -51,50 +51,72 @@
     >
       >
       <div
-        class="md:col-span-2 md:row-span-2 bg-white rounded-3xl p-8 border border-gray-200 shadow-sm flex flex-col justify-between hover:shadow-md transition group"
+        class="md:col-span-2 md:row-span-2 bg-white rounded-3xl p-6 md:p-8 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center md:items-start justify-between gap-6 hover:shadow-md transition group overflow-hidden"
       >
-        <div>
-          <div
-            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold mb-6"
-          >
-            <span
-              class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
-            ></span>
-            OPEN TO WORK
-          </div>
-          <h1
-            class="text-4xl md:text-5xl font-mono font-bold tracking-tight mb-4"
-          >
-            Hi, I'm <br /><span
-              class="text-accent-blue group-hover:underline decoration-4 underline-offset-4 decoration-blue-200 transition-all"
-              >Adam Alfajri.</span
+        <div
+          class="w-full md:w-3/5 flex flex-col justify-between h-full order-2 md:order-1 text-center md:text-left"
+        >
+          <div>
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold mb-4 md:mb-6"
             >
-          </h1>
-          <p class="text-gray-500 text-lg max-w-md">
-            Informatics Student @ UIN Jakarta. <br />
-            Turning chaotic logic into clean, functional code.
-          </p>
+              <span
+                class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
+              ></span>
+              OPEN TO WORK
+            </div>
+            <h1
+              class="text-4xl md:text-5xl font-mono font-bold tracking-tight mb-4"
+            >
+              Hi, I'm <br /><span
+                class="text-accent-blue group-hover:underline decoration-4 underline-offset-4 decoration-blue-200 transition-all"
+                >Adam Alfajri.</span
+              >
+            </h1>
+            <p
+              class="text-gray-500 text-sm md:text-lg max-w-md mx-auto md:mx-0"
+            >
+              Informatics Student @ UIN Jakarta. <br />
+              Turning chaotic logic into clean, functional code.
+            </p>
+          </div>
+
+          <div
+            class="flex gap-3 md:gap-4 mt-6 md:mt-8 justify-center md:justify-start"
+          >
+            <a
+              href="#"
+              class="px-5 py-3 rounded-xl bg-sys-black text-white text-sm md:text-base font-bold hover:bg-gray-800 transition shadow-lg shadow-gray-200"
+              >Download CV</a
+            >
+            <a
+              href="https://github.com/adamalfajri2005-dotcom"
+              target="_blank"
+              class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition text-xl text-gray-700"
+            >
+              <i class="ri-github-fill"></i>
+            </a>
+            <a
+              href="#"
+              class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition text-xl text-blue-600"
+            >
+              <i class="ri-linkedin-fill"></i>
+            </a>
+          </div>
         </div>
 
-        <div class="flex gap-4 mt-8">
-          <a
-            href="#"
-            class="px-6 py-3 rounded-xl bg-sys-black text-white font-bold hover:bg-gray-800 transition shadow-lg shadow-gray-200"
-            >Download CV</a
+        <div
+          class="w-full md:w-2/5 flex justify-center md:justify-end order-1 md:order-2"
+        >
+          <div
+            class="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-100 relative group-hover:scale-105 transition duration-500 ring-1 ring-gray-100"
           >
-          <a
-            href="https://github.com/adamalfajri2005-dotcom"
-            target="_blank"
-            class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition text-xl text-gray-700"
-          >
-            <i class="ri-github-fill"></i>
-          </a>
-          <a
-            href="#"
-            class="w-12 h-12 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 transition text-xl text-blue-600"
-          >
-            <i class="ri-linkedin-fill"></i>
-          </a>
+            <img
+              src="me.jpg"
+              alt="Foto Adam"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
