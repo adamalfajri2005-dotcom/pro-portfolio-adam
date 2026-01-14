@@ -96,18 +96,33 @@
         <div
           class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm overflow-x-auto"
         >
-          <div class="mermaid flex justify-center">
-            erDiagram BARANG ||--o{ TRANSAKSI : memiliki KATEGORI ||--|{ BARANG
-            : mengelompokkan SUPPLIER ||--o{ BARANG : menyuplai BARANG { string
-            kode_barang PK string nama_barang int stok_saat_ini date
-            tgl_kadaluarsa } TRANSAKSI { int id_transaksi PK string kode_barang
-            FK string jenis_transaksi int jumlah date tanggal }
-          </div>
-        </div>
-        <p class="text-center text-xs text-gray-400 mt-4 font-mono">
-          Entity Relationship Diagram (ERD)
-        </p>
-      </section>
+          <section>
+            <h2 class="font-mono text-2xl font-bold mb-6">Database Architecture</h2>
+            <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm overflow-x-auto flex justify-center">
+                <pre class="mermaid bg-white">
+                    erDiagram
+                        BARANG ||--o{ TRANSAKSI : memiliki
+                        KATEGORI ||--|{ BARANG : mengelompokkan
+                        SUPPLIER ||--o{ BARANG : menyuplai
+                        
+                        BARANG {
+                            string kode_barang PK
+                            string nama_barang
+                            int stok_saat_ini
+                            date tgl_kadaluarsa
+                        }
+                        
+                        TRANSAKSI {
+                            int id_transaksi PK
+                            string kode_barang FK
+                            string jenis_transaksi
+                            int jumlah
+                            date tanggal
+                        }
+                </pre>
+            </div>
+            <p class="text-center text-xs text-gray-400 mt-4 font-mono">Entity Relationship Diagram (ERD)</p>
+        </section>
 
       <section>
         <h2 class="font-mono text-2xl font-bold mb-6">Core Features</h2>
@@ -171,14 +186,9 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
-    <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'neutral',
-            securityLevel: 'loose',
-        });
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js';
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
     </script>
 </body>
-</html>
-  </body>
 </html>

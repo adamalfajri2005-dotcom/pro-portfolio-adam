@@ -81,16 +81,29 @@
     <main class="max-w-4xl mx-auto px-6 pb-20 space-y-16">
       <section>
         <div class="glass p-8 rounded-3xl overflow-x-auto">
-          <div class="mermaid flex justify-center">
-            %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor':
-            '#FACC15', 'edgeLabelBackground':'#111111', 'tertiaryColor':
-            '#111'}}}%% graph TD User[👤 User Input] -->|Pilih Soal| Script[🐍
-            Python Script] Script -->|Running| Method{Pilih Metode} Method --
-            Bisection --> Logic1[➗ Hitung Titik Tengah] Method -- Newton -->
-            Logic2[📉 Hitung Turunan] Logic1 --> Check{Error < 0.001?} Logic2
-            --> Check Check -- No --> Loop[🔁 Iterasi Ulang] Loop --> Script
-            Check -- Yes --> Result[✅ Print Akar & Grafik]
-          </div>
+          <section>
+            <div
+              class="glass p-8 rounded-3xl overflow-x-auto flex justify-center"
+            >
+              <pre class="mermaid bg-transparent">
+                    %%{init: {'theme': 'dark', 'themeVariables': { 'primaryColor': '#FACC15', 'edgeLabelBackground':'#111111', 'tertiaryColor': '#111'}}}%%
+                    graph TD
+                        User[👤 User Input] -->|Pilih Soal| Script[🐍 Python Script]
+                        Script -->|Running| Method{Pilih Metode}
+                        Method -- Bisection --> Logic1[➗ Hitung Titik Tengah]
+                        Method -- Newton --> Logic2[📉 Hitung Turunan]
+                        Logic1 --> Check{Error < 0.001?}
+                        Logic2 --> Check
+                        Check -- No --> Loop[🔁 Iterasi Ulang]
+                        Loop --> Script
+                        Check -- Yes --> Result[✅ Print Akar & Grafik]
+                </pre
+              >
+            </div>
+            <p class="text-center text-xs text-gray-600 mt-4 font-mono">
+              Algorithm Execution Flow
+            </p>
+          </section>
         </div>
         <p class="text-center text-xs text-gray-600 mt-4 font-mono">
           Algorithm Execution Flow
@@ -144,12 +157,9 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/mermaid@9.4.3/dist/mermaid.min.js"></script>
-    <script>
-      mermaid.initialize({
-        startOnLoad: true,
-        theme: "dark", // PENTING: Pake Dark Mode
-        securityLevel: "loose",
-      });
+    <script type="module">
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.js";
+      mermaid.initialize({ startOnLoad: true, theme: "dark" });
     </script>
   </body>
 </html>
