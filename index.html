@@ -56,9 +56,44 @@
         }
       }
 
+      @keyframes textShine {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 200% 50%;
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
       .bento-card {
         animation: dealCard 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
       }
+
+      .shine-text {
+        background: linear-gradient(90deg, #2563eb, #60a5fa, #2563eb);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: textShine 3s linear infinite;
+      }
+
+      .levitate {
+        animation: float 4s ease-in-out infinite;
+      }
+
       .delay-1 {
         animation-delay: 0.1s;
       }
@@ -102,7 +137,7 @@
               class="text-4xl md:text-5xl font-mono font-bold tracking-tight mb-4 text-gray-900"
             >
               Hi, I'm <br /><span
-                class="text-accent-blue group-hover:underline decoration-4 underline-offset-4 decoration-blue-200 transition-all"
+                class="shine-text font-bold decoration-4 underline-offset-4 decoration-blue-200 transition-all"
                 >Adam Alfajri.</span
               >
             </h1>
@@ -160,7 +195,7 @@
           </h2>
         </div>
         <div
-          class="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-4xl group-hover:rotate-12 transition duration-500 backdrop-blur-sm border border-white/10"
+          class="levitate w-20 h-20 rounded-full bg-white/10 flex items-center justify-center text-4xl backdrop-blur-sm border border-white/10"
         >
           🚀
         </div>
@@ -211,7 +246,7 @@
         class="bento-card delay-4 md:col-span-2 md:row-span-2 bg-white rounded-3xl p-8 border border-gray-200 shadow-sm hover:shadow-md transition group overflow-hidden relative block"
       >
         <div
-          class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition duration-500 transform group-hover:scale-110"
+          class="levitate absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition duration-500"
         >
           <i class="ri-database-2-fill text-9xl"></i>
         </div>
