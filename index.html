@@ -45,6 +45,7 @@
         overflow-x: hidden;
       }
 
+      /* ANIMATIONS */
       @keyframes dealCard {
         0% {
           opacity: 0;
@@ -77,6 +78,26 @@
         }
       }
 
+      /* TYPEWRITER ANIMATION */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: #2563eb;
+        }
+      }
+
+      /* CLASSES */
       .bento-card {
         animation: dealCard 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
       }
@@ -94,6 +115,18 @@
         animation: float 4s ease-in-out infinite;
       }
 
+      .typewriter {
+        overflow: hidden;
+        border-right: 3px solid #2563eb;
+        white-space: nowrap;
+        margin: 0;
+        width: 0;
+        animation: typing 3.5s steps(40, end) forwards,
+          blink-caret 0.75s step-end infinite;
+        animation-delay: 1.2s; /* Nunggu kartu muncul dulu baru ngetik */
+      }
+
+      /* DELAYS */
       .delay-1 {
         animation-delay: 0.1s;
       }
@@ -141,10 +174,18 @@
                 >Adam Alfajri.</span
               >
             </h1>
-            <p class="text-gray-500 text-sm md:text-lg leading-relaxed">
-              Informatics Student @ UIN Jakarta. <br />
-              Turning chaotic logic into clean, functional code.
+
+            <p class="text-gray-500 text-sm md:text-lg mb-2">
+              Informatics Student @ UIN Jakarta.
             </p>
+
+            <div class="w-fit mx-auto md:mx-0">
+              <p
+                class="typewriter text-gray-500 text-sm md:text-lg leading-relaxed font-mono font-bold text-accent-blue"
+              >
+                Turning chaotic logic into clean code.
+              </p>
+            </div>
           </div>
 
           <div class="flex gap-3 justify-center md:justify-start">
